@@ -4,7 +4,7 @@ import logging
 app = func.FunctionApp()
 
 @app.blob_trigger(arg_name="myblob", path="smartconnectinput",
-                               connection="st9asmartconnectapi_STORAGE") 
+                               connection="ed51c7_STORAGE") 
 def SmartConnectInput(myblob: func.InputStream):
     logging.info(f"Python blob trigger function processed blob"
                 f"Name: {myblob.name}"
@@ -17,7 +17,7 @@ def SmartConnectInput(myblob: func.InputStream):
 #
 # import azurefunctions.extensions.bindings.blob as blob
 # @app.blob_trigger(arg_name="client", path="smartconnectinput",
-#                   connection="st9asmartconnectapi_STORAGE")
+#                   connection="ed51c7_STORAGE")
 # def SmartConnectInput(client: blob.BlobClient):
 #     logging.info(
 #         f"Python blob trigger function processed blob \n"
